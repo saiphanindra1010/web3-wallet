@@ -22,15 +22,32 @@
             <button type="submit">Sign in</button>
         </form>
     </div>
+
+    <div id="wallet-send-container" >
+        <hr>
+        <h2>Send sepolia eth</h2>
+        <form id="send-wallet-form">
+            <label for="send-wallet-address">Receviers public key</label>
+            <input type="text" id="send-wallet-address" name="wallet-address">
+            <label for="send-wallet-address">Amount of eth</label>
+            <input type="text" id="send-wallet-address" name="wallet-address">
+            <button type="submit">Send</button>
+        </form>
+    </div>
+    
     <div id="wallet-list-container" style="display: none;">
-        <h2>Wallets:</h2>
-        <div id="wallet-list"></div>
+        <hr>
+        <h2>Add Wallets:</h2>
         <form id="add-wallet-form">
-            <label for="wallet-address">Add Web3 Wallet:</label>
+            <label for="wallet-address">Add Web3 Wallet enter your public key:</label>
             <input type="text" id="wallet-address" name="wallet-address">
             <button type="submit">Add Wallet</button>
         </form>
+        <div id="wallet-list"></div>
+       
     </div>
+
+   
     <script src="script.js"></script>
 </body>
 </html>

@@ -19,7 +19,9 @@ createMnemonicForm.addEventListener('submit', (e) => {
     mnemonic = generateMnemonic();
     document.getElementById('mnemonic').value = mnemonic;
     localStorage.setItem('mnemonic', mnemonic);
-    createMnemonicContainer.style.display = 'none';
+   
+    // createMnemonicContainer.style.display = 'none';
+    createMnemonicContainer.innerHTML="save this text to login next time "+mnemonic
     signinContainer.style.display = 'block';
 });
 
@@ -56,7 +58,9 @@ function displayWallets() {
     wallets.forEach((wallet) => {
         const walletItem = document.createElement('div');
         walletItem.className = 'wallet-item';
-        walletItem.textContent = wallet;
+        walletItem.textContent =wallet ;
         walletList.appendChild(walletItem);
     });
 }
+
+
